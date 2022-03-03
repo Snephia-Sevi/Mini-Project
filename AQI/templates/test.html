@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AQI form</title>
+
+<style>
+
+body {
+    font-size: 16px;
+    background: #f9f9f9;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+   }
+   h2 {
+    text-align: center;
+    text-decoration: underline;
+   }
+   form {
+    width: 300px;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 50px auto 0;
+    border-radius: 5px;
+   }
+   label {
+    display: block;
+    margin-bottom: 5px
+   }
+  /* label i {
+    color: #999;
+    font-size: 80%;
+   }*/
+   input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+   }
+   .row {
+    padding-bottom: 10px;
+   }
+  
+   .error {
+    color: red;
+    font-size: 90%;
+   }
+   input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+   }
+   input[type="submit"]:hover {
+    background: #0165b6;
+   }
+</style>
+
+
+
+
+</head>
+<body>
+<form name="contactForm" action="{{ url_for('predict') }}" method="POST">
+ <h2>AQI Prediction Form</h2>
+ <div class="row">
+ <label>PM2.5</label>
+ <input type="text" name="pm2_5" required>
+ <div class="error" id="pm2_5Err"></div>
+ </div>
+ <div class="row">
+ <label>PM10</label>
+ <input type="text" name="pm10" required>
+ <div class="error" id="pm10Err"></div>
+ </div>
+ <div class="row">
+ <label>NO(Nitrogen Monoxide)</label>
+ <input type="text" name="no" required>
+ <div class="error" id="noErr"></div>
+ </div>
+ <div class="row">
+<label>NO2(Nitrogen dioxide)</label>
+<input type="text" name="no2" required>
+<div class="error" id="no2Err"></div>
+</div>
+ <div class="row">
+ <label>NOx(Nitrogen Oxides)</label>
+ <input type="text" name="nox" required>
+ <div class="error" id="noxErr"></div>
+ </div>
+ <div class="row">
+ <label>NH3(Ammonia)</label>
+ <input type="text" name="nh3" required>
+ <div class="error" id=nh3Err"></div>
+ </div>
+ <div class="row">
+ <label>CO(Carbon Monoxide)</label>
+ <input type="text" name="co" required>
+ <div class="error" id="coErr"></div>
+ </div>
+ <div class="row">
+<label>SO2(Sulphur Dioxide)</label>
+    <input type="text" name="so2" required>
+    <div class="error" id="so2Err"></div>
+    </div>
+    <div class="row">
+        <label>O3(Trioxygen)</label>
+        <input type="text" name="o3" required>
+        <div class="error" id="o3Err"></div>
+        </div>
+        <div class="row">
+            <label>Benzene(C6H6)</label>
+            <input type="text" name="benzene" required>
+            <div class="error" id="benzeneErr"></div>
+            </div>
+            <div class="row">
+                <label>Toluene(C7H8)</label>
+                <input type="text" name="toluene"required>
+                <div class="error" id="tolueneErr"></div>
+                </div>
+<div class="row">
+<label>Xylene</label>
+<input type="text" name="xylene" required>
+<div class="error" id="xyleneErr"></div>
+</div>
+<div class="row">
+ <input type="submit" value="PREDICT">
+ </div>
+</form>
+
+</body>
+</html>

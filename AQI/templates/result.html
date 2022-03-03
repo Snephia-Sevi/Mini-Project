@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AQI Prediction</title>
+
+        <style>
+
+        body {
+        
+        background: #ffffff;
+        
+        }
+
+         h1{
+            text-align: center;
+             padding: 20px;
+             color: rgba(3, 56, 116, 0.699);
+            }
+        .value{
+    
+        background-color:  #3b0bacdc;
+        width: 500px;
+        margin: 0px 0px 0px 450px;
+        color: white;
+        font-size: 18px;
+        padding: 20px;
+        border-radius: 10px;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1><u>Air Quality Index Prediction</u></h1></center>
+        <div class="value">
+            
+          <center>  
+            
+            <p style="font-size:30px;">The final predicted value :<br><br><br>{{ prediction_result }}<br><br>
+            </p>
+        
+
+       
+        
+            <p style="font-size:30px">{{string}}</p>
+        </div>
+    </center>
+    </body>
+</html>
